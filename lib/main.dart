@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:orderbus/screens/intro_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:orderbus/config/app_colors.dart';
 import 'package:orderbus/config/app_constants.dart';
@@ -52,7 +53,7 @@ class MyApp extends StatelessWidget {
       // navigation
       initialRoute: '/login',
       routes: {
-        '/login': (context) => const LoginScreen(),
+        '/login': (context) => const IntroScreen(),
         '/': (context) => const MainScreen(),
         '/product': (context) => const ProductDetailScreen(),
       },

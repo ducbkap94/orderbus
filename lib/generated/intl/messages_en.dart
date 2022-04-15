@@ -22,12 +22,17 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "btnIntro": MessageLookupByLibrary.simpleMessage("Give me a ride"),
         "doNotEmpty":
             MessageLookupByLibrary.simpleMessage("Không được để trống!"),
         "emailError":
             MessageLookupByLibrary.simpleMessage("Email không đúng định dạng"),
         "favorite": MessageLookupByLibrary.simpleMessage("Favorite"),
         "hello": MessageLookupByLibrary.simpleMessage("hello"),
+        "intro": MessageLookupByLibrary.simpleMessage(
+            "Book a cab, tricycle or bike within seconds"),
+        "intro2": MessageLookupByLibrary.simpleMessage(
+            "The fastest app to book a cab, tricycle, or a bike anywhere "),
         "passwordError":
             MessageLookupByLibrary.simpleMessage("Password phải lớn hơn 6"),
         "usernameLoginSuccess":

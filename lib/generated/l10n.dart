@@ -109,6 +109,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Book a cab, tricycle or bike within seconds`
+  String get intro {
+    return Intl.message(
+      'Book a cab, tricycle or bike within seconds',
+      name: 'intro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The fastest app to book a cab, tricycle, or a bike anywhere `
+  String get intro2 {
+    return Intl.message(
+      'The fastest app to book a cab, tricycle, or a bike anywhere ',
+      name: 'intro2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Give me a ride`
+  String get btnIntro {
+    return Intl.message(
+      'Give me a ride',
+      name: 'btnIntro',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

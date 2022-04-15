@@ -106,6 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: ElevatedButton.styleFrom(
                   shape: const StadiumBorder(),
                   minimumSize: const Size.fromHeight(45),
+                  
                 ),
                 onPressed: () => login(context),
                 child: const Text("LOGIN"),
