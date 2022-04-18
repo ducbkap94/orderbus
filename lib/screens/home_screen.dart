@@ -1,4 +1,12 @@
+import 'dart:convert';
+
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:orderbus/config/app_colors.dart';
+import 'package:orderbus/config/app_dimens.dart';
+import 'package:orderbus/config/app_images.dart';
+import 'package:orderbus/config/app_text_styles.dart';
 import 'package:provider/provider.dart';
 import 'package:orderbus/providers/store.dart';
 import 'package:orderbus/widgets/product_list_item.dart';
@@ -9,40 +17,20 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final store = Provider.of<Store>(context);
-
     return Scaffold(
       appBar: AppBar(
-        title: Text(store.getUser?.userName ?? ''),
-      ),
-      body: ListView(
-        children: [
-          Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 20,
-              vertical: 25,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "List Product",
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
-                      color: Colors.black87),
-                ),
-              ],
-            ),
-          ),
-          ...store.products.map((item) {
-            return InkWell(
-              onTap: () {
-                store.setActiveProduct(item);
-                Navigator.pushNamed(context, '/product');
-              },
-              child: ProductListItem(product: item),
-            );
-          }),
+        backgroundColor: AppColors.cFFFFFF,
+        elevation: 0,
+        leading: IconButton(
+          icon: SvgPicture.asset(AppImages.menu),
+          onPressed: () => {},
+        ),
+        actions: [
+          IconButton(
+            onPressed: () => {},
+            icon: Image.asset(AppImages.avatar),
+            color: AppColors.c19104E,
+          )
         ],
       ),
     );

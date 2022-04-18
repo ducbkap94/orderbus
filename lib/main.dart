@@ -7,7 +7,6 @@ import 'package:orderbus/config/app_colors.dart';
 import 'package:orderbus/config/app_constants.dart';
 import 'package:orderbus/generated/l10n.dart';
 import 'package:orderbus/providers/store.dart';
-import 'package:orderbus/screens/login_screen.dart';
 import 'package:orderbus/screens/main_screen.dart';
 import 'package:orderbus/screens/product_detail.dart';
 
@@ -53,7 +52,7 @@ class MyApp extends StatelessWidget {
       // navigation
       initialRoute: '/login',
       routes: {
-        '/login': (context) => const IntroScreen(),
+        //'/login': (context) => const IntroScreen(),
         '/': (context) => const MainScreen(),
         '/product': (context) => const ProductDetailScreen(),
       },
